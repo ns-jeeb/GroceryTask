@@ -173,14 +173,7 @@
                     </includes>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<artifactId>org.springframework.boot</artifactId>-->
-                <!--<configuration>-->
-                    <!--<folders>-->
-                        <!--<folder>${project.build.directory}/../ext-resources</folder>-->
-                    <!--</folders>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+
 <!--update plugin in 12/2/2015-->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
