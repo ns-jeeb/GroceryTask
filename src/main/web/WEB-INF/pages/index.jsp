@@ -5,6 +5,7 @@
 
 <!-- Carousel
 ================================================== -->
+<h2>This page is not under constructed and it is not finished </h2>
 <c:if test="${not empty users}">
 <div style="float: left; margin-left: 10px;margin-top: 10px;">
     <div class="bs-example">

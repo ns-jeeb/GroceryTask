@@ -42,6 +42,12 @@
         <put-attribute name="body" value="/WEB-INF/pages/logingSuccess.jsp" />
         <put-attribute name="current" value="Login" />
     </definition>
+    <definition name="done_grocery" extends="common">
+        <put-attribute name="tiles" value="Grocery Done" />
+        <put-attribute name="body" value="/WEB-INF/pages/done_grocery.jsp" />
+        <put-attribute name="current" value="Grocery Done" />
+    </definition>
+
 
 
 

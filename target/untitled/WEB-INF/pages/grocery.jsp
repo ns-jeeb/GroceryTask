@@ -35,8 +35,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/layout/taglibs.jsp"%>
 
-<form:form commandName="item" id="grocery_form">
-    <div>
+    <form:form commandName="item" id="grocery_form">
+        <div>
             <div style="float: left;">
                 <h2 style="background-color: #EDA698;">${beef.get(0)}</h2>
                 <c:forEach items="${beef}" var="beef">
@@ -178,31 +178,17 @@
 
 
 
-    </div>
+        </div>
 
 
-    <div style="width: 200px">
-        <form:button value="Submit" class="btn_submit" name="createTable">Create Table</form:button>
-
-    </div>
-
-
-</form:form>
-
-<form:form commandName="item">
-    <c:forEach items="${meatsParts}" var="meatParts">
-        <div>
-            <form:checkbox path="animalName" value="${meatParts}"/>
-            <c:out value="${meatParts}"/>
+        <div style="width: 200px">
+            <form:button value="Submit" class="btn_submit" name="createTable">Create Table</form:button>
 
         </div>
-    </c:forEach>
-
-    <form:button value="Submit" name="CompleteGrocery"> <form:hidden path="animalName"/> Complated Grocery</form:button>
-</form:form>
 
 
-${message}
+    </form:form>
+
 
 
 

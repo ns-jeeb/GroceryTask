@@ -18,7 +18,7 @@
 
 <!-- Datepicker -->
 <div class="input-group date" >
-    <p>Nice work</p>
+<h2>This page is not under constructed</h2>
 </div>
 
 <div class="input-group date">

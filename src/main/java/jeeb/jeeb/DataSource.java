@@ -77,7 +77,7 @@ public class DataSource {
         String key_fruit = "Fruit";
         String key_parts = "Parts";
 
-        String key = null;
+        String json = "";
 
         if (listData != null){
             beefs = new ArrayList<String> ();
@@ -101,34 +101,34 @@ public class DataSource {
                 }
             }
         }
-        assert beefs != null;
-        assert lambs != null;
-        assert chickens != null;
-        assert porks != null;
-        assert goats != null;
         //if collection exist it drops and create new one
         if (isExist){
             docColl.drop ();
             System.out.println ("temp table is dropped");
 
         }
-        //is not error handled yet assume users add all data from the all dropdown menus.
-        docColl.insertOne (new Document ("Grocery", new Document ()
-                .append (key_beefs, new Document (key_parts, Arrays.asList (beefs.toArray ())))
-                .append (key_lambs, new Document (key_parts, Arrays.asList (lambs.toArray ())))
-                .append (key_goats, new Document (key_parts, Arrays.asList (goats.toArray ())))
-                .append (key_porks, new Document (key_parts, Arrays.asList (porks.toArray ())))
-                .append (key_chickens, new Document (key_parts, Arrays.asList (chickens.toArray ())))
-                .append (key_vege, new Document (key_parts, Arrays.asList (veges.toArray ())))
-                .append (key_fruit, new Document (key_parts, Arrays.asList (fruits.toArray ())))
 
-        ));
-            String json = "";
-            if (docColl.hashCode () >= 1){
-                return json = "1 table is created";
-            }else {
-                return json = "0 table created";
-            }
+        if (beefs != null && lambs!= null&& chickens!= null&& porks!=null && goats!= null){
+            docColl.insertOne (new Document ("Grocery", new Document ()
+                    .append (key_beefs, new Document (key_parts, Arrays.asList (beefs.toArray ())))
+                    .append (key_lambs, new Document (key_parts, Arrays.asList (lambs.toArray ())))
+                    .append (key_goats, new Document (key_parts, Arrays.asList (goats.toArray ())))
+                    .append (key_porks, new Document (key_parts, Arrays.asList (porks.toArray ())))
+                    .append (key_chickens, new Document (key_parts, Arrays.asList (chickens.toArray ())))
+                    .append (key_vege, new Document (key_parts, Arrays.asList (veges.toArray ())))
+                    .append (key_fruit, new Document (key_parts, Arrays.asList (fruits.toArray ())))
+
+            ));
+        }else {
+            return json = "No Item chose";
+
+        }
+        if (docColl.hashCode () >= 1){
+            json = "1 table is Created";
+        }else {
+           json = "0 table created";
+        }
+       return json;
     }
     public String buildKeyFromList(List<String> list, String key){
         String returnKey = null;
