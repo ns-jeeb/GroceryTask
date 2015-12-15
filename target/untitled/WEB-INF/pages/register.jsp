@@ -10,31 +10,31 @@
 <%@include file="../../layout/taglibs.jsp"%>
 ${user.name}
 <div class="formClass" style="padding-top: 20px;">
+    <h2>This page is not under constructed</h2>
+    <%--<h2>Message : ${message}</h2>--%>
+    <%--<h2>Message : ${title}</h2>--%>
 
-    <h2>Message : ${message}</h2>
-    <h2>Message : ${title}</h2>
+    <%--<c:if test="${pageContext.request.userPrincipal.name != null}">--%>
+        <%--<h3>User Info : ${pageContext.request.userPrincipal.name}--%>
+            <%--| <a href="<c:url value="/" />" >Logout</a></h3>--%>
+    <%--</c:if>--%>
 
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <h3>User Info : ${pageContext.request.userPrincipal.name}
-            | <a href="<c:url value="/" />" >Logout</a></h3>
-    </c:if>
-
-    <form:form name='f' commandName="user"  method='POST'>
-        <table>
-            <tr>
-                <td>User:</td>
-                <td><form:input type='text' name='username' value='' path="name"/></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><form:input type='password' name='password'  path="password"/></td>
-            </tr>
-            <tr>
-                <td><input name="submit" type="submit" value="submit" /></td>
-            </tr>
-        </table>
-    </form:form>
-    ${message}
+    <%--<form:form name='f' commandName="user"  method='POST'>--%>
+        <%--<table>--%>
+            <%--<tr>--%>
+                <%--<td>User:</td>--%>
+                <%--<td><form:input type='text' name='username' value='' path="name"/></td>--%>
+            <%--</tr>--%>
+            <%--<tr>--%>
+                <%--<td>Password:</td>--%>
+                <%--<td><form:input type='password' name='password'  path="password"/></td>--%>
+            <%--</tr>--%>
+            <%--<tr>--%>
+                <%--<td><input name="submit" type="submit" value="submit" /></td>--%>
+            <%--</tr>--%>
+        <%--</table>--%>
+    <%--</form:form>--%>
+    <%--${message}--%>
 
 
     <form:form commandName="user" cssClass="form-horizontal">

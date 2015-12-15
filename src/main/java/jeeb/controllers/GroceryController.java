@@ -33,6 +33,8 @@ public class GroceryController {
 
     @RequestMapping("/grocery")
     public String viewGroceryForm(ModelMap modelMap, Item meat, BindingResult result) throws IOException {
+        String resource = getClass ().getSimpleName ();
+        System.out.println (resource);
 
 
         ParsingJsons parssingJson = new ParsingJsons ();
@@ -86,7 +88,7 @@ public class GroceryController {
 
         modelMap.addAttribute ("message",message);
 
-        return "grocery";
+        return "done_grocery";
     }
     // this method create string and split with comma and and make array with a word has capital letter
 //    public List<List<String>> toManageData(List<String>dataList){
